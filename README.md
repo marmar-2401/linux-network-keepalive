@@ -2,11 +2,9 @@
 
 A lightweight, single-command installer that configures a Linux **systemd service** to continuously ping a configurable list of IP addresses. The service starts automatically after reboot and restarts if its main process exits.
 
-This can help maintain periodic network traffic to devices that may otherwise sit idle. **It does not disable NIC power management or guarantee that a network card stays awake.**
+This can help maintain periodic network traffic to devices that may otherwise sit idle.
 
 ## Features
-
-- Preconfigured with seven IP addresses; no interactive setup required.
 - Supports adding or removing targets without modifying the service file.
 - Runs a separate, continuous `ping` process for each address (in parallel).
 - Automatically enables the service at boot through `systemctl enable`.
